@@ -1,9 +1,14 @@
 fileFormatVersion: 2
 guid: 62d778c587c05f1448ce00891b1d0725
-timeCreated: 1509376412
+timeCreated: 1509483899
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Time Traveler Standing SpriteSheet_0
+    21300002: Time Traveler Standing SpriteSheet_1
+    21300004: Time Traveler Standing SpriteSheet_2
+    21300006: Time Traveler Standing SpriteSheet_3
+    21300008: Time Traveler Standing SpriteSheet_4
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -39,7 +44,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -63,9 +68,95 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Time Traveler Standing SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 381
+        y: 76
+        width: 309
+        height: 822
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Time Traveler Standing SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1342
+        y: 76
+        width: 309
+        height: 822
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Time Traveler Standing SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 2300
+        y: 76
+        width: 312
+        height: 838
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Time Traveler Standing SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 3261
+        y: 76
+        width: 310
+        height: 838
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Time Traveler Standing SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 4220
+        y: 76
+        width: 312
+        height: 822
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 
