@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class PlayerScript : MonoBehaviour {
 
@@ -27,19 +29,23 @@ public class PlayerScript : MonoBehaviour {
 		}
 		else if (moveHorizontal > 0) {
 			my_animator.SetTrigger ("isWalking");
-			//transform.localScale = new Vector3 (1f, 1f, 1f);
+			transform.localScale = new Vector3 (0.2f, 0.2f, 0f);
 		}
 		else if (moveHorizontal < 0) {
 			my_animator.SetTrigger ("isWalking");
-			//transform.localScale = new Vector3 (-1f, 1f, 1f);
+			transform.localScale = new Vector3 (-0.2f, 0.2f, 0f);
 		} 
 		else {
 			my_animator.SetTrigger ("isIdle");
 		}
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			SceneManager.LoadScene (0);
+		}
 	}
 
-	void OnCollisionEnter(Collision2D other){
-		if (other.collider.CompareTag ("floor")) {
+	void OnCollisionEnter(Collision other){
+		if (other.gameObject.CompareTag ("floor")) {
+			print ("Works");
 			isGrounded = true;
 		}
 	}
