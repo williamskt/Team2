@@ -27,11 +27,11 @@ public class PlayerScript : MonoBehaviour {
 		}
 		else if (moveHorizontal > 0) {
 			my_animator.SetTrigger ("isWalking");
-			transform.localScale = new Vector3 (1f, 1f, 1f);
+			//transform.localScale = new Vector3 (1f, 1f, 1f);
 		}
 		else if (moveHorizontal < 0) {
 			my_animator.SetTrigger ("isWalking");
-			transform.localScale = new Vector3 (-1f, 1f, 1f);
+			//transform.localScale = new Vector3 (-1f, 1f, 1f);
 		} 
 		else {
 			my_animator.SetTrigger ("isIdle");
