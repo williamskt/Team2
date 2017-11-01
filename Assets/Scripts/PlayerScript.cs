@@ -12,7 +12,7 @@ public class PlayerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		my_animator = getComponent<Animator> ();
+		my_animator = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
 	}
 	
