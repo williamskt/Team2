@@ -23,7 +23,6 @@ public class MainMenu : MonoBehaviour {
 	void OnMouseUp () {
 		if (isStart) {
 			SceneManager.LoadScene(1);
-			//Application.LoadLevel (1);
 
 		} else if (isSettings) {
 
