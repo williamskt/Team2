@@ -22,6 +22,7 @@ public class PlayerScript : MonoBehaviour {
 	void Update () {
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		transform.position += new Vector3 (moveHorizontal, 0f, 0f) * Time.deltaTime * speed;
+
 		if(Input.GetKeyDown(KeyCode.Space) && isGrounded){
 			my_animator.SetTrigger ("isJumping");
 			rb.velocity = new Vector2 (0f, jumpheight);
@@ -43,7 +44,7 @@ public class PlayerScript : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter(Collision other){
+	void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.CompareTag ("floor")) {
 			print ("Works");
 			isGrounded = true;
