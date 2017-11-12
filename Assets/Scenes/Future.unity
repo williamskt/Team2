@@ -555,7 +555,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b1c53d68f0384e65bcf7213fe376f18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1780739220}
+  player: {fileID: 1269169021}
 --- !u!1 &176557942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1608,7 +1608,7 @@ GameObject:
   - component: {fileID: 1269169023}
   - component: {fileID: 1269169022}
   m_Layer: 0
-  m_Name: Player 2
+  m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2733,12 +2733,12 @@ GameObject:
   - component: {fileID: 1780739221}
   - component: {fileID: 1780739226}
   m_Layer: 0
-  m_Name: Player
+  m_Name: Player-original
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &1780739221
 Animator:
   serializedVersion: 3

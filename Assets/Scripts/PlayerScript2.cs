@@ -11,11 +11,21 @@ public class PlayerScript2 : MonoBehaviour {
 	Rigidbody2D rb;
 	public float jumpheight = 2f;
 	bool isGrounded = true;
+	private float x_pos;
+	private float y_pos;
+	private float z_pos;
 
 	// Use this for initialization
 	void Start () {
 		my_animator = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
+
+		//Saving the inital x, y, z scales
+		//If the character needs to be resized, this allows the code to adjust automatically
+		//instead of recoding the values later on
+		x_pos = transform.localScale.x;
+		y_pos = transform.localScale.y;
+		z_pos = transform.localScale.z;
 	}
 	
 
@@ -39,7 +49,7 @@ public class PlayerScript2 : MonoBehaviour {
 		//}
 
 		else if (moveHorizontal > 0){		//Moving right (while jumping or running)
-			transform.localScale = new Vector3 (0.2f, 0.2f, 0f);
+			transform.localScale = new Vector3 (x_pos, y_pos, z_pos);
 
 			if (isGrounded) {				//Moving right while running
 				my_animator.SetBool ("isWalkingB", true);
@@ -47,7 +57,7 @@ public class PlayerScript2 : MonoBehaviour {
 			}
 		}
 		else if (moveHorizontal < 0){		//Moving left (while jumping or running)
-			transform.localScale = new Vector3 (-0.2f, 0.2f, 0f);
+			transform.localScale = new Vector3 (-x_pos, y_pos, z_pos);
 
 			if (isGrounded) {				//Moving left while running
 				my_animator.SetBool ("isWalkingB", true);
