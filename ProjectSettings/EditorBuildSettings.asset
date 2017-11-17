@@ -11,6 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Future.unity
     guid: 82fe1ab896e9647ecaa131a61b1934f6
-  - enabled: 1
-    path: Assets/Scenes/Test(scene1).unity
+  - enabled: 0
+    path: 
     guid: d2ddd92d3e5b5e0429da52521639154b
