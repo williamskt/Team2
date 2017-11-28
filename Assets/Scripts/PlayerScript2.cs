@@ -14,7 +14,7 @@ public class PlayerScript2 : MonoBehaviour {
 	private float x_pos;
 	private float y_pos;
 	private float z_pos;
-	private int health = 8f;
+	private int health = 8;
 
 	// Use this for initialization
 	void Start () {

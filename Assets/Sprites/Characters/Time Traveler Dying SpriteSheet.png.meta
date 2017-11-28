@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: be306fa54f7e23b4a9fdb6385b3871f4
-timeCreated: 1511841384
+guid: 7eeaf24da8714234596246c08698896f
+timeCreated: 1511846683
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: RoboNinja Idle SpriteSheet_0
-    21300002: RoboNinja Idle SpriteSheet_1
-    21300004: RoboNinja Idle SpriteSheet_2
-    21300006: RoboNinja Idle SpriteSheet_3
+    21300000: Time Traveler Dying SpriteSheet_0
+    21300002: Time Traveler Dying SpriteSheet_1
+    21300004: Time Traveler Dying SpriteSheet_2
+    21300006: Time Traveler Dying SpriteSheet_3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -87,13 +87,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RoboNinja Idle SpriteSheet_0
+      name: Time Traveler Dying SpriteSheet_0
       rect:
         serializedVersion: 2
-        x: 46
-        y: 78
-        width: 836
-        height: 868
+        x: 652
+        y: 124
+        width: 503
+        height: 808
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,13 +101,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: RoboNinja Idle SpriteSheet_1
+      name: Time Traveler Dying SpriteSheet_1
       rect:
         serializedVersion: 2
-        x: 1006
-        y: 78
-        width: 836
-        height: 868
+        x: 1757
+        y: 119
+        width: 566
+        height: 808
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,13 +115,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: RoboNinja Idle SpriteSheet_2
+      name: Time Traveler Dying SpriteSheet_2
       rect:
         serializedVersion: 2
-        x: 1966
-        y: 78
-        width: 836
-        height: 836
+        x: 2796
+        y: 111
+        width: 935
+        height: 808
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,13 +129,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: RoboNinja Idle SpriteSheet_3
+      name: Time Traveler Dying SpriteSheet_3
       rect:
         serializedVersion: 2
-        x: 2926
-        y: 78
-        width: 836
-        height: 836
+        x: 4108
+        y: 108
+        width: 983
+        height: 808
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
