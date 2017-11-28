@@ -1,10 +1,12 @@
 fileFormatVersion: 2
-guid: 144b283acbe8a6946b54d54f6fc24035
-timeCreated: 1511850769
+guid: af03724246adb184ca079446c3875b63
+timeCreated: 1511853835
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Gun Sprite_0
+    21300000: Dino-plants_0
+    21300002: Dino-plants_1
+    21300004: Dino-plants_2
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -84,13 +86,41 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Gun Sprite_0
+      name: Dino-plants_0
       rect:
         serializedVersion: 2
-        x: 368
-        y: 416
-        width: 256
-        height: 144
+        x: 290
+        y: 206
+        width: 88
+        height: 157
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Dino-plants_1
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 227
+        width: 136
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Dino-plants_2
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 220
+        width: 205
+        height: 220
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

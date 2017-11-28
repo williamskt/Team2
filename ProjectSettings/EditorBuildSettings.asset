@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 813578056b0421c42a00296a1ff74ea3
   - enabled: 1
+    path: Assets/Scenes/Dinosaur.unity
+    guid: 5b38ffa1e38da184c99c394b84657672
+  - enabled: 1
     path: Assets/Scenes/Future.unity
     guid: 82fe1ab896e9647ecaa131a61b1934f6
   - enabled: 0
