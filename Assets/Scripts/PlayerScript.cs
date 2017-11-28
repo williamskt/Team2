@@ -11,6 +11,7 @@ public class PlayerScript : MonoBehaviour {
 	Rigidbody2D rb;
 	public float jumpheight = 2f;
 	bool isGrounded = true;
+	int health = 8;
 
 	// Use this for initialization
 	void Start () {

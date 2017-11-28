@@ -14,6 +14,7 @@ public class PlayerScript2 : MonoBehaviour {
 	private float x_pos;
 	private float y_pos;
 	private float z_pos;
+	private int health = 8f;
 
 	// Use this for initialization
 	void Start () {
@@ -74,12 +75,19 @@ public class PlayerScript2 : MonoBehaviour {
 	}
 
 	//Checking to see if player is touching the ground
-	//Making sure the jumping boolean is set to false, if player is on the ground
+	//Making sure the jumping boolean is set to false if player is on the ground
 	void OnCollisionEnter2D(Collision2D other){
 		if (other.gameObject.CompareTag ("floor")) {
-			print ("ground");
 			isGrounded = true;
 			my_animator.SetBool ("isJumpingB", false);
 		}
+		//Removes health if player comes in contact with enemy
+		else if (other.gameObject.CompareTag ("enemy")) {
+			health--;
+			if (health == 0) {
+				//Game Over
+			}
+		}
 	}
+
 }
