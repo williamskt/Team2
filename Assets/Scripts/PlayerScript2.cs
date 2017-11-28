@@ -84,7 +84,7 @@ public class PlayerScript2 : MonoBehaviour {
 			//rb.velocity = new Vector2 (0f, jumpheight);
 			//}
 
-		else if (moveHorizontal > 0) {		//Moving right (while jumping or running)
+			else if (moveHorizontal > 0) {		//Moving right (while jumping or running)
 				transform.localScale = new Vector3 (x_pos, y_pos, z_pos);
 
 				if (isGrounded) {				//Moving right while running
@@ -136,7 +136,14 @@ public class PlayerScript2 : MonoBehaviour {
 			other.gameObject.SetActive (false);
 			my_animator.SetBool ("isJumpingB", false);
 			my_animator.SetBool ("isWalkingB", false);
-			my_animator.SetBool ("isIdleB", true);
+			my_animator.SetBool ("isIdleB", false);
+
+			if (isGrounded) {
+				my_animator.SetBool ("GunRun", true);
+			} else {
+				my_animator.SetBool ("GunJump", true);
+			}
+
 		}
 	}
 
