@@ -125,8 +125,9 @@ public class PlayerScript2 : MonoBehaviour {
 		//Removes health if player comes in contact with enemy
 		else if (other.gameObject.CompareTag ("enemy")) {
 			health--;
+			print ("Ouch. Health: " + health);
 			if (health == 0) {
-				//Game Over
+				SceneManager.LoadScene (2);
 			}
 
 		} //Checking to see if player picked up Gun 
