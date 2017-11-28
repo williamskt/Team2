@@ -1,0 +1,255 @@
+fileFormatVersion: 2
+guid: 9848aa7772cad2a4f839f56706c22ea0
+timeCreated: 1511845143
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Villain Run SpriteSheet_0
+    21300002: Villain Run SpriteSheet_1
+    21300004: Villain Run SpriteSheet_2
+    21300006: Villain Run SpriteSheet_3
+    21300008: Villain Run SpriteSheet_4
+    21300010: Villain Run SpriteSheet_5
+    21300012: Villain Run SpriteSheet_6
+    21300014: Villain Run SpriteSheet_7
+    21300016: Villain Run SpriteSheet_8
+    21300018: Villain Run SpriteSheet_9
+    21300020: Villain Run SpriteSheet_10
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  - buildTarget: WebGL
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Villain Run SpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 1132
+        width: 697
+        height: 711
+      alignment: 9
+      pivot: {x: 0.61136526, y: 0.5398248}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Villain Run SpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 1020
+        y: 1036
+        width: 646
+        height: 793
+      alignment: 9
+      pivot: {x: 0.7138228, y: 0.58909684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Villain Run SpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 2012
+        y: 1053
+        width: 583
+        height: 759
+      alignment: 9
+      pivot: {x: 0.76113874, y: 0.5885577}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Villain Run SpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 2972
+        y: 1053
+        width: 584
+        height: 742
+      alignment: 9
+      pivot: {x: 0.74649006, y: 0.5752498}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Villain Run SpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 3933
+        y: 1053
+        width: 599
+        height: 759
+      alignment: 9
+      pivot: {x: 0.70564955, y: 0.57297647}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Villain Run SpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 4940
+        y: 1084
+        width: 568
+        height: 745
+      alignment: 9
+      pivot: {x: 0.6705021, y: 0.5598035}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Villain Run SpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 173
+        width: 681
+        height: 711
+      alignment: 9
+      pivot: {x: 0.6072868, y: 0.54129976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Villain Run SpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 77
+        width: 599
+        height: 773
+      alignment: 9
+      pivot: {x: 0.7421618, y: 0.5924872}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Villain Run SpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 1981
+        y: 91
+        width: 614
+        height: 745
+      alignment: 9
+      pivot: {x: 0.7485761, y: 0.57870626}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Villain Run SpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 2957
+        y: 91
+        width: 599
+        height: 728
+      alignment: 9
+      pivot: {x: 0.74296147, y: 0.59180146}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Villain Run SpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 3947
+        y: 91
+        width: 599
+        height: 745
+      alignment: 9
+      pivot: {x: 0.6952954, y: 0.5832265}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
