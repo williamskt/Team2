@@ -7,6 +7,7 @@ TagManager:
   - floor
   - enemy
   - Gun
+  - Bullet_1
   layers:
   - Default
   - TransparentFX

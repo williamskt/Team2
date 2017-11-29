@@ -17,6 +17,10 @@ public class PlayerScript2 : MonoBehaviour {
 	private int health = 8;
 	private bool Gun = false;
 
+	public Transform ShootPoint;	//Point for character to shoot from
+	public GameObject Bullet_1; //Object the character will shoot
+
+
 	// Use this for initialization
 	void Start () {
 		my_animator = GetComponent<Animator> ();
@@ -102,6 +106,11 @@ public class PlayerScript2 : MonoBehaviour {
 				my_animator.SetBool ("isIdleB", true);
 				my_animator.SetBool ("isWalkingB", false);
 			}
+		}
+
+		//Firing Gun
+		if (Input.GetButton ("Fire1")) {
+			Instantiate (Bullet_1, ShootPoint.position, ShootPoint.rotation);
 		}
 
 		// Letting Player go to main menu when pressing escape key

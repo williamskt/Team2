@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 137429288}
   - component: {fileID: 137429287}
   m_Layer: 0
-  m_Name: Gun Sprite_0
+  m_Name: Gun
   m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2530,6 +2530,48 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!1001 &719525026
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4442172111440048, guid: 2e71a7f6d8cfa3a4089f1d57b0f14e35, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -4.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442172111440048, guid: 2e71a7f6d8cfa3a4089f1d57b0f14e35, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442172111440048, guid: 2e71a7f6d8cfa3a4089f1d57b0f14e35, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442172111440048, guid: 2e71a7f6d8cfa3a4089f1d57b0f14e35, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442172111440048, guid: 2e71a7f6d8cfa3a4089f1d57b0f14e35, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442172111440048, guid: 2e71a7f6d8cfa3a4089f1d57b0f14e35, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442172111440048, guid: 2e71a7f6d8cfa3a4089f1d57b0f14e35, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4442172111440048, guid: 2e71a7f6d8cfa3a4089f1d57b0f14e35, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2e71a7f6d8cfa3a4089f1d57b0f14e35, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &728422148
 GameObject:
   m_ObjectHideFlags: 0
