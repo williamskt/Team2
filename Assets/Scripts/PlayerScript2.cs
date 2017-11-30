@@ -168,4 +168,8 @@ public class PlayerScript2 : MonoBehaviour {
 		}
 	}
 
+	public int getHealth(){
+		return health;
+	}
+
 }

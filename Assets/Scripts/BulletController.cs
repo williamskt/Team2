@@ -31,7 +31,7 @@ public class BulletController : MonoBehaviour {
 		GetComponent<Rigidbody2D>().velocity = new Vector2 (BulletSpeed, GetComponent<Rigidbody2D>().velocity.y);
 	}
 
-	void OnTriggerEnter2D(Collider2D other){
+	void OnCollisionEnter2D(Collider2D other){
 
 		if (other.gameObject.CompareTag ("enemy")) {
 			//Code not quite working, only takes -1 off enemy health once, then never again
