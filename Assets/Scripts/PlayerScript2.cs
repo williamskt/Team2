@@ -40,7 +40,7 @@ public class PlayerScript2 : MonoBehaviour {
 		transform.position += new Vector3 (moveHorizontal, 0f, 0f) * Time.deltaTime * speed;
 
 
-		if (Gun) {
+		if (Gun) { //If the player has collected the gun
 
 			if (Input.GetButton ("Jump") && isGrounded) {	//Jumping
 				my_animator.SetBool ("GunJump", true);
@@ -50,23 +50,34 @@ public class PlayerScript2 : MonoBehaviour {
 				//rb.AddForce (new Vector2 (0f, 500f));
 				rb.velocity = new Vector2 (0f, jumpheight);
 				isGrounded = false;
-			}
-
+			} 
 			else if (moveHorizontal > 0) {		//Moving right (while jumping or running)
 				transform.localScale = new Vector3 (x_pos, y_pos, z_pos);
 
 				if (isGrounded) {				//Moving right while running
 					my_animator.SetBool ("GunRun", true);
 					my_animator.SetBool ("GunIdle", false);
+
+					//Firing Gun
+					if (Input.GetButton ("Fire1")) {
+						Instantiate (Bullet_1, ShootPoint.position, ShootPoint.rotation);
+					}
 				}
-			} else if (moveHorizontal < 0) {		//Moving left (while jumping or running)
+			} 
+			else if (moveHorizontal < 0) {		//Moving left (while jumping or running)
 				transform.localScale = new Vector3 (-x_pos, y_pos, z_pos);
 
 				if (isGrounded) {				//Moving left while running
 					my_animator.SetBool ("GunRun", true);
 					my_animator.SetBool ("GunIdle", false);
+
+					//Firing Gun
+					if (Input.GetButton ("Fire1")) {
+						Instantiate (Bullet_1, ShootPoint.position, ShootPoint.rotation);
+					}
 				}
-			} else if (isGrounded) {				//Idle, if player is on ground
+			} 
+			else if (isGrounded) {				//Idle, if player is on ground
 				my_animator.SetBool ("GunIdle", true);
 				my_animator.SetBool ("GunRun", false);
 			}
@@ -108,10 +119,7 @@ public class PlayerScript2 : MonoBehaviour {
 			}
 		}
 
-		//Firing Gun
-		if (Input.GetButton ("Fire1")) {
-			Instantiate (Bullet_1, ShootPoint.position, ShootPoint.rotation);
-		}
+
 
 		// Letting Player go to main menu when pressing escape key
 		if (Input.GetKeyDown (KeyCode.Escape)) {
@@ -153,6 +161,10 @@ public class PlayerScript2 : MonoBehaviour {
 				my_animator.SetBool ("GunJump", true);
 			}
 
+		} //Checking to see if player landed in Lava
+		//If yes, then player gets sent back to start menu
+		else if (other.gameObject.CompareTag ("Lava")) {
+			SceneManager.LoadScene (0);
 		}
 	}
 

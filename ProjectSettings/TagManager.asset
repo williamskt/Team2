@@ -8,6 +8,7 @@ TagManager:
   - enemy
   - Gun
   - Bullet_1
+  - Lava
   layers:
   - Default
   - TransparentFX

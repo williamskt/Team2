@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212761230664088248}
   - component: {fileID: 50128137883894118}
   - component: {fileID: 61900712924949756}
+  - component: {fileID: 114910014105608056}
   m_Layer: 0
   m_Name: Bullet_1
   m_TagString: Bullet_1
@@ -36,8 +37,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1715541419057424}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.5, y: -2.68, z: 0}
-  m_LocalScale: {x: 0.13, y: 0.13, z: 1}
+  m_LocalPosition: {x: -4.4011, y: -2.6643, z: 0}
+  m_LocalScale: {x: 0.33603632, y: 0.2631901, z: 1.6568065}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -56,7 +57,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -87,6 +88,19 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.96, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &114910014105608056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1715541419057424}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e627992124f794d4b9ac4d6caa68d247, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BulletSpeed: 30
+  enemyHealth: 0
 --- !u!212 &212761230664088248
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -118,7 +132,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 74104e67b842cba4a85ccd268c44d71d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
