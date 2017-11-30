@@ -3827,6 +3827,77 @@ Transform:
   m_Father: {fileID: 688498378}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &937212272 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1789148080709262, guid: 29f378677b9ff314f90c14a26e1110cf,
+    type: 2}
+  m_PrefabInternal: {fileID: 423850199}
+--- !u!114 &937212276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937212272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb45c3bacc61f41b48a4f76f2bf6c0ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
+  jumpheight: 2
+  ShootPoint: {fileID: 406019135}
+  Bullet_1: {fileID: 0}
+  player: {fileID: 1267834058}
+  h8: {fileID: 21300000, guid: 766750217900f49ff879e5f1929e5e6e, type: 3}
+  h7: {fileID: 21300000, guid: 5c12d52457ef44f83b77fe535d5c7c76, type: 3}
+  h6: {fileID: 21300000, guid: b131f712641c14c768d7c79c89d42f1c, type: 3}
+  h5: {fileID: 21300000, guid: cdad46681f80d46bca86aa347c1259d7, type: 3}
+  h4: {fileID: 21300000, guid: aae2e8965591b440981303ab475afb25, type: 3}
+  h3: {fileID: 21300000, guid: fb4ed8ca04c6b478181a30de38d638d2, type: 3}
+  h2: {fileID: 21300000, guid: 30c2d87267a1249acbca84f30e8e7915, type: 3}
+  h1: {fileID: 21300000, guid: 9d8a866e862af453da8652fbced660c4, type: 3}
+--- !u!212 &937212277
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 937212272}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 766750217900f49ff879e5f1929e5e6e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 9.6, y: 9.6}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &942082632
 GameObject:
   m_ObjectHideFlags: 0
