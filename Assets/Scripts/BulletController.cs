@@ -5,7 +5,6 @@ using UnityEngine;
 public class BulletController : MonoBehaviour {
 
 	public float BulletSpeed;
-	public int enemyHealth = 0;
 	private GameObject player;
 
 
@@ -25,32 +24,12 @@ public class BulletController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-
-
+		//Adding velocity to bullet
 		GetComponent<Rigidbody2D>().velocity = new Vector2 (BulletSpeed, GetComponent<Rigidbody2D>().velocity.y);
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		if (other.gameObject.CompareTag ("enemy")) {
-			//Code not quite working, only takes -1 off enemy health once, then never again
-			//enemyHealth = enemyHealth - 1;
-			//print (enemyHealth);
-			//print ("hit");
-
-			//if (enemyHealth < 1) {
-			//Destroy (other.gameObject);
-			//}
-		} else if (other.gameObject.CompareTag ("Bullet_1")) {
-			print ("HitBullet");
-		} else if (other.gameObject.CompareTag ("Player")) {
-			print("HitPlayer");
-		} else if (other.gameObject.CompareTag ("Gun")) {
-			print("HitGun");
-		} else {
-			print("HitOther");
-		} 
-		print ("Destroyed");
+		//print ("Destroyed");
 		Destroy (gameObject); //Destroys bullet when bullet hits another game object
 	}
 }

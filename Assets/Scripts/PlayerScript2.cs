@@ -6,24 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScript2 : MonoBehaviour {
 
-	private Animator my_animator;
-	private Rigidbody2D rb;
-	public Transform ShootPoint;	//Point for character to shoot from
-	public GameObject Bullet_1; //Object the character will shoot
+	private Animator my_animator;		//Player Animator
+	private Rigidbody2D rb;				//Player rigid body
+	public Transform ShootPoint;		//Point for character to shoot from
+	public GameObject Bullet_1; 		//Object the character will shoot
 
-	public float jumpheight = 2f;
-	public float speed = 10f;
+	public float jumpheight = 2f;		//Jump height of player
+	public float speed = 10f;			//Horizontal Speed of player
 
-	private float x_pos;		//x position of player
-	private float y_pos;		//y position of player
-	private float z_pos;		//z position of player
+	private float x_pos;				//x position of player
+	private float y_pos;				//y position of player
+	private float z_pos;				//z position of player
 	public float ShootRate = 0.05F;		//Rate of shooting if shoot button held down
 	private float NextShoot = 0.0F;		//Empty variable to hold time of next shot
 
-	private int health = 8;		//Player health
+	private int health = 8;				//Player health
 
 	private bool isGrounded = true;		//Variable to tell if player is standing/running on ground
-	private bool Gun = false;	//Variable to tell if the player has picked up gun
+	private bool Gun = false;			//Variable to tell if the player has picked up gun
 
 
 

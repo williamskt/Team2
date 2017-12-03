@@ -358,29 +358,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4408638068333878, guid: 95d3760e9e15c7c43859be8dd19c98b2, type: 2}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
-    - target: {fileID: 212757236734479266, guid: 95d3760e9e15c7c43859be8dd19c98b2,
+    - target: {fileID: 114338527221474306, guid: 95d3760e9e15c7c43859be8dd19c98b2,
         type: 2}
-      propertyPath: m_SortingOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408638068333878, guid: 95d3760e9e15c7c43859be8dd19c98b2, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4408638068333878, guid: 95d3760e9e15c7c43859be8dd19c98b2, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1267834058}
     - target: {fileID: 1596396565838268, guid: 95d3760e9e15c7c43859be8dd19c98b2, type: 2}
       propertyPath: m_Name
       value: RoboNinjaBasic (1)
-      objectReference: {fileID: 0}
-    - target: {fileID: 61116503825401158, guid: 95d3760e9e15c7c43859be8dd19c98b2,
-        type: 2}
-      propertyPath: m_IsTrigger
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95d3760e9e15c7c43859be8dd19c98b2, type: 2}
@@ -544,7 +531,7 @@ GameObject:
   - component: {fileID: 137429285}
   - component: {fileID: 137429288}
   - component: {fileID: 137429287}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Gun
   m_TagString: Gun
   m_Icon: {fileID: 0}
@@ -600,11 +587,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 137429284}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.89, y: -1.72, z: 0}
+  m_LocalPosition: {x: -6.5, y: -2.03, z: 0}
   m_LocalScale: {x: 0.6, y: 0.6, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &137429287
 BoxCollider2D:
@@ -1961,7 +1948,7 @@ Prefab:
     - target: {fileID: 224121575154705180, guid: 29f378677b9ff314f90c14a26e1110cf,
         type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 224121575154705180, guid: 29f378677b9ff314f90c14a26e1110cf,
         type: 2}
@@ -4240,11 +4227,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4709185506460814, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.13
+      value: -8.43
       objectReference: {fileID: 0}
     - target: {fileID: 4709185506460814, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2.16
+      value: -2.85
       objectReference: {fileID: 0}
     - target: {fileID: 4709185506460814, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4269,19 +4256,6 @@ Prefab:
     - target: {fileID: 4709185506460814, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114911043178438238, guid: 949fd8ad18c96934bbe1dac89059e827,
-        type: 2}
-      propertyPath: ShootRate
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4061793115701192, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.68
-      objectReference: {fileID: 0}
-    - target: {fileID: 4061793115701192, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 5.41
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
@@ -7216,7 +7190,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1638770574
 GameObject:
@@ -9508,6 +9482,16 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 0.3
       objectReference: {fileID: 0}
+    - target: {fileID: 114338527221474306, guid: 95d3760e9e15c7c43859be8dd19c98b2,
+        type: 2}
+      propertyPath: EnemyHealth
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114338527221474306, guid: 95d3760e9e15c7c43859be8dd19c98b2,
+        type: 2}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1267834058}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95d3760e9e15c7c43859be8dd19c98b2, type: 2}
   m_IsPrefabParent: 0
