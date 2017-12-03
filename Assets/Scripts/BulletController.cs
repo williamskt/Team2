@@ -29,7 +29,7 @@ public class BulletController : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D other){
-		//print ("Destroyed");
+		print ("Destroyed");
 		Destroy (gameObject); //Destroys bullet when bullet hits another game object
 	}
 }

@@ -59,7 +59,7 @@ public class Enemy : MonoBehaviour {
 			//Both instances below (Abs & Distance) work, but both output two numbers, don't know why
 			//Dist = Mathf.Abs (x_posE - x_posP); 
 			Dist = Vector3.Distance(Player.transform.position, transform.position);
-			print (Dist);
+			//print (Dist);
 
 			if (Dist <= AttackDist) {
 				enemy_animator.SetBool ("AttackToIdle", false);
