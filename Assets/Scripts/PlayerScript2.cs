@@ -6,19 +6,27 @@ using UnityEngine.SceneManagement;
 
 public class PlayerScript2 : MonoBehaviour {
 
-	public float speed = 10f;
-	Animator my_animator;
-	Rigidbody2D rb;
-	public float jumpheight = 2f;
-	bool isGrounded = true;
-	private float x_pos;
-	private float y_pos;
-	private float z_pos;
-	private int health = 8;
-	private bool Gun = false;
-
+	private Animator my_animator;
+	private Rigidbody2D rb;
 	public Transform ShootPoint;	//Point for character to shoot from
 	public GameObject Bullet_1; //Object the character will shoot
+
+	public float jumpheight = 2f;
+	public float speed = 10f;
+
+	private float x_pos;		//x position of player
+	private float y_pos;		//y position of player
+	private float z_pos;		//z position of player
+	public float ShootRate = 0.05F;		//Rate of shooting if shoot button held down
+	private float NextShoot = 0.0F;		//Empty variable to hold time of next shot
+
+	private int health = 8;		//Player health
+
+	private bool isGrounded = true;		//Variable to tell if player is standing/running on ground
+	private bool Gun = false;	//Variable to tell if the player has picked up gun
+
+
+
 
 
 	// Use this for initialization
@@ -46,6 +54,7 @@ public class PlayerScript2 : MonoBehaviour {
 				my_animator.SetBool ("GunJump", true);
 				my_animator.SetBool ("GunRun", false);
 				my_animator.SetBool ("GunIdle", false);
+				my_animator.SetBool ("GunIdleShoot", false);
 
 				//rb.AddForce (new Vector2 (0f, 500f));
 				rb.velocity = new Vector2 (0f, jumpheight);
@@ -57,11 +66,10 @@ public class PlayerScript2 : MonoBehaviour {
 				if (isGrounded) {				//Moving right while running
 					my_animator.SetBool ("GunRun", true);
 					my_animator.SetBool ("GunIdle", false);
+					my_animator.SetBool ("GunIdleShoot", false);
 
 					//Firing Gun
-					if (Input.GetButton ("Fire1")) {
-						Instantiate (Bullet_1, ShootPoint.position, ShootPoint.rotation);
-					}
+					Invoke ("Shoot", 0);	//Calling Shoot function
 				}
 			} 
 			else if (moveHorizontal < 0) {		//Moving left (while jumping or running)
@@ -70,16 +78,28 @@ public class PlayerScript2 : MonoBehaviour {
 				if (isGrounded) {				//Moving left while running
 					my_animator.SetBool ("GunRun", true);
 					my_animator.SetBool ("GunIdle", false);
+					my_animator.SetBool ("GunIdleShoot", false);
 
 					//Firing Gun
-					if (Input.GetButton ("Fire1")) {
-						Instantiate (Bullet_1, ShootPoint.position, ShootPoint.rotation);
-					}
+					Invoke ("Shoot", 0);	//Calling Shoot function
 				}
 			} 
 			else if (isGrounded) {				//Idle, if player is on ground
-				my_animator.SetBool ("GunIdle", true);
-				my_animator.SetBool ("GunRun", false);
+				//Firing Gun
+				if (Input.GetButton ("Fire1")) {
+					my_animator.SetBool ("GunRun", false);
+					my_animator.SetBool ("GunJump", false);
+					my_animator.SetBool ("GunIdle", false);
+					my_animator.SetBool ("GunIdleShoot", true);
+
+					//Firing Gun
+					Invoke ("Shoot", 0);	//Calling Shoot function
+
+				} else {
+					my_animator.SetBool ("GunIdleShoot", false);
+					my_animator.SetBool ("GunIdle", true);
+					my_animator.SetBool ("GunRun", false);
+				}
 			}
 
 		}
@@ -170,6 +190,14 @@ public class PlayerScript2 : MonoBehaviour {
 
 	public int getHealth(){
 		return health;
+	}
+
+	//When called, shoots gun at a certain rate if the fire button is pressed
+	void Shoot (){
+		if (Input.GetButton ("Fire1") && Time.time > NextShoot) {
+			NextShoot = Time.time + ShootRate;
+			Instantiate (Bullet_1, ShootPoint.position, ShootPoint.rotation);
+		}
 	}
 
 }

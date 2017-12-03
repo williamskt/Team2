@@ -36,13 +36,21 @@ public class BulletController : MonoBehaviour {
 			//Code not quite working, only takes -1 off enemy health once, then never again
 			//enemyHealth = enemyHealth - 1;
 			//print (enemyHealth);
-			print ("hit");
+			//print ("hit");
 
 			//if (enemyHealth < 1) {
-				//Destroy (other.gameObject);
+			//Destroy (other.gameObject);
 			//}
-		}
-
+		} else if (other.gameObject.CompareTag ("Bullet_1")) {
+			print ("HitBullet");
+		} else if (other.gameObject.CompareTag ("Player")) {
+			print("HitPlayer");
+		} else if (other.gameObject.CompareTag ("Gun")) {
+			print("HitGun");
+		} else {
+			print("HitOther");
+		} 
+		print ("Destroyed");
 		Destroy (gameObject); //Destroys bullet when bullet hits another game object
 	}
 }

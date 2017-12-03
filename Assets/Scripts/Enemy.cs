@@ -29,7 +29,7 @@ public class Enemy : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.CompareTag ("Bullet_1")) {
-			print ("hitE");
+			print ("hitEnemy");
 			enemy_animator.SetBool ("Death", true);
 		}
 	}

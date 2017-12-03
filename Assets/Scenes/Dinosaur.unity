@@ -1769,34 +1769,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &406019134
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 406019135}
-  m_Layer: 0
-  m_Name: ShootPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: -6488666005112524639, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &406019135
+--- !u!4 &406019135 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 406019134}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2, y: 1.72, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1267834064}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_PrefabParentObject: {fileID: 4061793115701192, guid: 949fd8ad18c96934bbe1dac89059e827,
+    type: 2}
+  m_PrefabInternal: {fileID: 1029175811}
 --- !u!1 &418464968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3843,10 +3820,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb45c3bacc61f41b48a4f76f2bf6c0ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
-  jumpheight: 2
   ShootPoint: {fileID: 406019135}
   Bullet_1: {fileID: 0}
+  jumpheight: 2
+  speed: 10
+  ShootRate: 0.05
   player: {fileID: 1267834058}
   h8: {fileID: 21300000, guid: 766750217900f49ff879e5f1929e5e6e, type: 3}
   h7: {fileID: 21300000, guid: 5c12d52457ef44f83b77fe535d5c7c76, type: 3}
@@ -4292,43 +4270,18 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 212396001690796254, guid: 949fd8ad18c96934bbe1dac89059e827,
-        type: 2}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4709185506460814, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 0.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4709185506460814, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 0.3
-      objectReference: {fileID: 0}
     - target: {fileID: 114911043178438238, guid: 949fd8ad18c96934bbe1dac89059e827,
         type: 2}
-      propertyPath: GunObject
-      value: 
-      objectReference: {fileID: 137429288}
-    - target: {fileID: 114911043178438238, guid: 949fd8ad18c96934bbe1dac89059e827,
-        type: 2}
-      propertyPath: jumpheight
-      value: 10
+      propertyPath: ShootRate
+      value: 0.1
       objectReference: {fileID: 0}
-    - target: {fileID: 114911043178438238, guid: 949fd8ad18c96934bbe1dac89059e827,
-        type: 2}
-      propertyPath: ShootPoint
-      value: 
-      objectReference: {fileID: 406019135}
-    - target: {fileID: 114911043178438238, guid: 949fd8ad18c96934bbe1dac89059e827,
-        type: 2}
-      propertyPath: Bullet_1
-      value: 
-      objectReference: {fileID: 1715541419057424, guid: 2e71a7f6d8cfa3a4089f1d57b0f14e35,
-        type: 2}
-    - target: {fileID: 1082539090003442, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
-      propertyPath: m_TagString
-      value: Player
+    - target: {fileID: 4061793115701192, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 4061793115701192, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5.41
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
@@ -5341,11 +5294,6 @@ SpriteRenderer:
 --- !u!1 &1267834058 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1082539090003442, guid: 949fd8ad18c96934bbe1dac89059e827,
-    type: 2}
-  m_PrefabInternal: {fileID: 1029175811}
---- !u!4 &1267834064 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4709185506460814, guid: 949fd8ad18c96934bbe1dac89059e827,
     type: 2}
   m_PrefabInternal: {fileID: 1029175811}
 --- !u!1 &1283959556
