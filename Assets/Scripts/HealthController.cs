@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HealthController : PlayerScript2 {
 
-	public GameObject player;
+	private GameObject player;
 	public Sprite h8, h7, h6, h5, h4, h3, h2, h1;
 	SpriteRenderer sr;
 

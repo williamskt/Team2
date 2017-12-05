@@ -62,13 +62,19 @@ public class Enemy : MonoBehaviour {
 			//print (Dist);
 
 			if (Dist <= AttackDist) {
+				Vector3 lookAt = Player.transform.position;
+				lookAt.y = transform.position.y;
+				transform.LookAt (lookAt);
 				enemy_animator.SetBool ("AttackToIdle", false);
 				enemy_animator.SetBool ("IdleToAttack", true);
 
-				if ((Time.time > NextAttack) && (!Death)) {
+				if (Time.time > NextAttack) {
 					NextAttack = Time.time + AttackRate;
 					Instantiate (NinjaStar, AttackPoint.position, AttackPoint.rotation);
 				}
+			} else {
+				enemy_animator.SetBool ("IdleToAttack", false);
+				enemy_animator.SetBool ("AttackToIdle", true);
 			}
 		}
 

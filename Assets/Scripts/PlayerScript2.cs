@@ -17,7 +17,7 @@ public class PlayerScript2 : MonoBehaviour {
 	private float x_pos;				//x position of player
 	private float y_pos;				//y position of player
 	private float z_pos;				//z position of player
-	public float ShootRate = 0.05F;		//Rate of shooting if shoot button held down
+	public float ShootRate = 0.1F;		//Rate of shooting if shoot button held down
 	private float NextShoot = 0.0F;		//Empty variable to hold time of next shot
 
 	private int health = 8;				//Player health
@@ -195,6 +195,7 @@ public class PlayerScript2 : MonoBehaviour {
 	//When called, shoots gun at a certain rate if the fire button is pressed
 	void Shoot (){
 		if (Input.GetButton ("Fire1") && Time.time > NextShoot) {
+			//yield return new WaitForSeconds (1);	//Tried to make a delay between shots
 			NextShoot = Time.time + ShootRate;
 			Instantiate (Bullet_1, ShootPoint.position, ShootPoint.rotation);
 		}
