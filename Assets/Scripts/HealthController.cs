@@ -16,6 +16,7 @@ public class HealthController : PlayerScript2 {
 	
 	// Update is called once per frame
 	void Update () {
+		print (getHealth ());
 		if (getHealth () == 8) {
 			sr.sprite = h8;
 		}

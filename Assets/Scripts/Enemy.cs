@@ -21,6 +21,7 @@ public class Enemy : MonoBehaviour {
 	public int EnemyHealth = 12;	//Health points for enemy
 	public float AttackDist = 12F;	//Distance when enemy starts attacking
 	private float Dist;				//Variable to tell how far player is from enemy
+	private Vector3 target;
 	public float AttackRate = 0.05F;
 	private float NextAttack = 0.0F;
 	private bool Death = false;
@@ -62,9 +63,6 @@ public class Enemy : MonoBehaviour {
 			//print (Dist);
 
 			if (Dist <= AttackDist) {
-				Vector3 lookAt = Player.transform.position;
-				lookAt.y = transform.position.y;
-				transform.LookAt (lookAt);
 				enemy_animator.SetBool ("AttackToIdle", false);
 				enemy_animator.SetBool ("IdleToAttack", true);
 
@@ -81,7 +79,7 @@ public class Enemy : MonoBehaviour {
 		
 	}
 
-	void OnTriggerEnter2D(Collider2D other){
+	IEnumerator OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.CompareTag ("Bullet_1")) {
 			//print ("hitEnemy");
 
@@ -94,7 +92,8 @@ public class Enemy : MonoBehaviour {
 				enemy_animator.SetBool("IdleToAttack", false);
 				enemy_animator.SetBool ("AttackToIdle", false);
 				enemy_animator.SetBool ("Death", true);
-				gameObject.layer = 8;	//Enemy is placed on different level so bullets no longer interact
+				yield return new WaitForSeconds (2);
+				Destroy (gameObject);
 			}
 		}
 	}

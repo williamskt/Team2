@@ -19,6 +19,7 @@ public class PlayerScript2 : MonoBehaviour {
 	private float z_pos;				//z position of player
 	public float ShootRate = 0.1F;		//Rate of shooting if shoot button held down
 	private float NextShoot = 0.0F;		//Empty variable to hold time of next shot
+	protected float timeLeft;
 
 	private int health = 8;				//Player health
 
@@ -31,6 +32,7 @@ public class PlayerScript2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		timeLeft = 90.0f;
 		my_animator = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
 
@@ -44,6 +46,10 @@ public class PlayerScript2 : MonoBehaviour {
 	
 
 	void Update () {
+		timeLeft -= Time.deltaTime;
+		if (timeLeft < 0) {
+			GameOver ();
+		}
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		transform.position += new Vector3 (moveHorizontal, 0f, 0f) * Time.deltaTime * speed;
 
@@ -184,12 +190,16 @@ public class PlayerScript2 : MonoBehaviour {
 		} //Checking to see if player landed in Lava
 		//If yes, then player gets sent back to start menu
 		else if (other.gameObject.CompareTag ("Lava")) {
-			SceneManager.LoadScene (0);
+			GameOver ();
 		}
 	}
 
 	public int getHealth(){
 		return health;
+	}
+
+	protected float getTime(){
+		return timeLeft;
 	}
 
 	//When called, shoots gun at a certain rate if the fire button is pressed
@@ -199,6 +209,12 @@ public class PlayerScript2 : MonoBehaviour {
 			NextShoot = Time.time + ShootRate;
 			Instantiate (Bullet_1, ShootPoint.position, ShootPoint.rotation);
 		}
+	}
+
+	void GameOver(){
+		//Insert death animation for player
+		//Play GameOver animation
+		SceneManager.LoadScene(0);
 	}
 
 }
