@@ -99,6 +99,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f688bba4c41e7bc40819734039137aff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 0}
+  NinjaStar: {fileID: 0}
+  AttackPoint: {fileID: 0}
+  EnemyHealth: 12
+  AttackDist: 12
+  AttackRate: 0.1
   StarSpeed: 10
 --- !u!212 &212738296191513876
 SpriteRenderer:

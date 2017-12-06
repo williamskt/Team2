@@ -10,6 +10,7 @@ TagManager:
   - Bullet_1
   - Lava
   - border
+  - TimePickup
   layers:
   - Default
   - TransparentFX
