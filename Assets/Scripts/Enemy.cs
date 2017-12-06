@@ -22,9 +22,10 @@ public class Enemy : MonoBehaviour {
 	public float AttackDist = 12F;	//Distance when enemy starts attacking
 	private float Dist;				//Variable to tell how far player is from enemy
 	private Vector3 target;
-	public float AttackRate = 0.05F;
+	public float AttackRate = 0.1F;
 	private float NextAttack = 0.0F;
 	private bool Death = false;
+	protected bool throwFlip = false;
 
 
 	// Use this for initialization
@@ -56,7 +57,13 @@ public class Enemy : MonoBehaviour {
 			y_posE = transform.position.y;
 			z_posE = transform.position.z;
 
-
+			if (x_posP > x_posE) {
+				transform.localScale = new Vector3 (-x_scaleE, y_scaleE, z_scaleE);
+				throwFlip = true;
+			} else if (x_posP < x_posE) {
+				transform.localScale = new Vector3 (x_scaleE, y_scaleE, z_scaleE);
+				throwFlip = false;
+			}
 			//Both instances below (Abs & Distance) work, but both output two numbers, don't know why
 			//Dist = Mathf.Abs (x_posE - x_posP); 
 			Dist = Vector3.Distance(Player.transform.position, transform.position);
@@ -92,9 +99,17 @@ public class Enemy : MonoBehaviour {
 				enemy_animator.SetBool("IdleToAttack", false);
 				enemy_animator.SetBool ("AttackToIdle", false);
 				enemy_animator.SetBool ("Death", true);
-				yield return new WaitForSeconds (2);
+				yield return new WaitForSeconds (1);
 				Destroy (gameObject);
 			}
 		}
+	}
+
+	void Attack(){
+
+	}
+
+	public float getScale(){
+		return transform.lossyScale.x;
 	}
 }

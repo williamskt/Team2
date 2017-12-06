@@ -19,9 +19,10 @@ public class PlayerScript2 : MonoBehaviour {
 	private float z_pos;				//z position of player
 	public float ShootRate = 0.1F;		//Rate of shooting if shoot button held down
 	private float NextShoot = 0.0F;		//Empty variable to hold time of next shot
-	protected float timeLeft;
+	public float timeLeft;
 
 	private int health = 8;				//Player health
+	private HealthController hCon;
 
 	private bool isGrounded = true;		//Variable to tell if player is standing/running on ground
 	private bool Gun = false;			//Variable to tell if the player has picked up gun
@@ -32,9 +33,10 @@ public class PlayerScript2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		timeLeft = 90.0f;
+		timeLeft = 60.0f;
 		my_animator = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
+		hCon = GetComponent<HealthController> ();
 
 		//Saving the inital x, y, z scales
 		//If the character needs to be resized, this allows the code to adjust automatically
@@ -167,11 +169,7 @@ public class PlayerScript2 : MonoBehaviour {
 		}
 		//Removes health if player comes in contact with enemy
 		else if (other.gameObject.CompareTag ("enemy")) {
-			health--;
-			print ("Ouch. Health: " + health);
-			if (health == 0) {
-				SceneManager.LoadScene (2);
-			}
+			hCon.TakeDamage ();
 
 		} //Checking to see if player picked up Gun 
 		else if (other.gameObject.CompareTag ("Gun")) {
@@ -194,12 +192,18 @@ public class PlayerScript2 : MonoBehaviour {
 		}
 	}
 
-	public int getHealth(){
-		return health;
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.CompareTag ("enemy")) {
+			hCon.TakeDamage ();
+		}
+		else if (other.gameObject.CompareTag ("TimePickup")) {
+			timeLeft += 5;
+			Destroy (other.gameObject);
+		}
 	}
 
-	protected float getTime(){
-		return timeLeft;
+	public int getHealth(){
+		return health;
 	}
 
 	//When called, shoots gun at a certain rate if the fire button is pressed
@@ -211,10 +215,10 @@ public class PlayerScript2 : MonoBehaviour {
 		}
 	}
 
-	void GameOver(){
+	public void GameOver(){
 		//Insert death animation for player
 		//Play GameOver animation
-		SceneManager.LoadScene(0);
+		//SceneManager.LoadScene(0);
 	}
 
 }

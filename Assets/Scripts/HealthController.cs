@@ -1,45 +1,43 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class HealthController : PlayerScript2 {
+public class HealthController : MonoBehaviour {
 
-	private GameObject player;
-	public Sprite h8, h7, h6, h5, h4, h3, h2, h1;
-	SpriteRenderer sr;
+	public int startingHealth = 8;
+	public int currentHealth;
+	public Image healthImage;
+
+	private Animator healthUI;
+	private PlayerScript2 player;
+	private bool damaged;
+	private bool dead;
+	private double time;
 
 	// Use this for initialization
 	void Start () {
-		player = GameObject.Find ("PlayerBasic");
-		sr = GetComponent<SpriteRenderer> ();
+		player = GetComponent<PlayerScript2> ();
+		currentHealth = startingHealth;
+		healthUI = healthImage.GetComponent<Animator> ();
+		healthUI.speed = 0;
+		time = 0;
+	}
+
+	void Update () {
+
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		print (getHealth ());
-		if (getHealth () == 8) {
-			sr.sprite = h8;
+	public void TakeDamage(){
+		damaged = true;
+		currentHealth--;
+		if (currentHealth <= 0) {
+			player.GameOver ();
+		} 
+		else {
+			time += 0.0833333333;
+			//healthUI.PlayInFixedTime (time);
 		}
-		else if (getHealth () == 7) {
-			sr.sprite = h7;
-		}
-		else if (getHealth () == 6) {
-			sr.sprite = h6;
-		}
-		else if (getHealth () == 5) {
-			sr.sprite = h5;
-		}
-		else if (getHealth () == 4) {
-			sr.sprite = h4;
-		}
-		else if (getHealth () == 3) {
-			sr.sprite = h3;
-		}
-		else if (getHealth () == 2) {
-			sr.sprite = h2;
-		}
-		else if (getHealth () == 1) {
-			sr.sprite = h1;
-		}
+		damaged = false;
 	}
 }
