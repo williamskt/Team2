@@ -2,17 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NinjaStarController : Enemy {
+public class NinjaStarController : MonoBehaviour {
 
 	public float StarSpeed = 10F;
 	private float initialSpeed;
 	private GameObject player;
+	private GameObject Ninja;
 
-	// Use this for initialization
+	//Use this for initialization
 	void Start () {
+		Ninja = GetComponentInParent<GameObject> ();
 		initialSpeed = StarSpeed;
-		print (getScale ());
-		if (!throwFlip) {
+		if (Ninja.transform.localScale.x < 0) {
 			StarSpeed = -initialSpeed;
 		} else {
 			StarSpeed = initialSpeed;
@@ -29,6 +30,8 @@ public class NinjaStarController : Enemy {
 
 		
 	}
+
+
 
 	void OnTriggerEnter2D(Collider2D other){
 		//print ("Destroyed");

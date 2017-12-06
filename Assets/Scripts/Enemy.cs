@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour {
 	Animator enemy_animator;
 	public GameObject Player;
 	public GameObject NinjaStar;//Object the character will attack with
+	private Rigidbody2D starBody;
 	public Transform AttackPoint;
 	private float x_scaleE;		//x scale of enemy
 	private float y_scaleE;		//y scale of enemy
@@ -25,14 +26,12 @@ public class Enemy : MonoBehaviour {
 	public float AttackRate = 0.1F;
 	private float NextAttack = 0.0F;
 	private bool Death = false;
-	protected bool throwFlip = false;
-
+	private bool throwFlip = false;
 
 	// Use this for initialization
 	void Start () {
-
+		starBody = NinjaStar.GetComponent<Rigidbody2D> ();
 		enemy_animator = GetComponent<Animator> ();
-
 		//Saving the inital x, y, z scales
 		//If the enemy needs to be resized, this allows the code to adjust automatically
 		//instead of recoding the values later on
@@ -57,13 +56,14 @@ public class Enemy : MonoBehaviour {
 			y_posE = transform.position.y;
 			z_posE = transform.position.z;
 
-			if (x_posP > x_posE) {
+			//Enemy always faces player, but can't figure out how to flip the direction of the star
+			/*if (x_posP > x_posE) {
 				transform.localScale = new Vector3 (-x_scaleE, y_scaleE, z_scaleE);
 				throwFlip = true;
 			} else if (x_posP < x_posE) {
 				transform.localScale = new Vector3 (x_scaleE, y_scaleE, z_scaleE);
 				throwFlip = false;
-			}
+			}*/
 			//Both instances below (Abs & Distance) work, but both output two numbers, don't know why
 			//Dist = Mathf.Abs (x_posE - x_posP); 
 			Dist = Vector3.Distance(Player.transform.position, transform.position);
@@ -75,7 +75,10 @@ public class Enemy : MonoBehaviour {
 
 				if (Time.time > NextAttack) {
 					NextAttack = Time.time + AttackRate;
-					Instantiate (NinjaStar, AttackPoint.position, AttackPoint.rotation);
+					Rigidbody2D star;
+					star = Instantiate (starBody, AttackPoint.position, AttackPoint.rotation) as Rigidbody2D;
+					star.velocity = transform.TransformDirection (Vector2.left * 10);
+					//star.Throw (throwFlip);
 				}
 			} else {
 				enemy_animator.SetBool ("IdleToAttack", false);
@@ -108,6 +111,14 @@ public class Enemy : MonoBehaviour {
 	void Attack(){
 
 	}
+	/*public void Throw(bool left){
+		if (left) {
+			NinjaStar.GetComponent<Rigidbody2D> ().velocity = new Vector2 (10F, GetComponent<Rigidbody2D> ().velocity.y);
+		}
+		else {
+			NinjaStar.GetComponent<Rigidbody2D>().velocity = new Vector2 (-10F, GetComponent<Rigidbody2D>().velocity.y);
+		}
+	}*/
 
 	public float getScale(){
 		return transform.lossyScale.x;
