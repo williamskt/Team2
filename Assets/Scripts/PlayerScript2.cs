@@ -51,7 +51,7 @@ public class PlayerScript2 : MonoBehaviour {
 
 	void Update () {
 		timeLeft -= Time.deltaTime;
-		if (timeLeft == 0) {
+		if (timeLeft <= 0.001) {
 			SceneManager.LoadScene (SceneNum);
 		}
 		float moveHorizontal = Input.GetAxis ("Horizontal");

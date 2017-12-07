@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthController : MonoBehaviour {
 
@@ -15,14 +16,18 @@ public class HealthController : MonoBehaviour {
 	private bool damaged;
 	private bool dead;
 	private double time;
+	private int SceneNum;
 
 	// Use this for initialization
 	void Start () {
+		SceneNum = SceneManager.GetActiveScene ().buildIndex;
+		print (SceneNum);
 		player = GetComponent<PlayerScript2> ();
 		currentHealth = startingHealth;
 		healthUI = healthImage.GetComponent<Animator> ();
 		healthUI.speed = 0;
 		time = 0;
+
 	}
 
 	void Update () {
@@ -32,8 +37,10 @@ public class HealthController : MonoBehaviour {
 	public void TakeDamage(){
 		damaged = true;
 		currentHealth--;
+		print (currentHealth);
 		if (currentHealth <= 0) {
-			player.GameOver ();
+			SceneManager.LoadScene (SceneNum);
+			//player.GameOver ();
 		} 
 		else {
 			healthSlider.value = currentHealth;

@@ -2229,29 +2229,29 @@ Prefab:
       propertyPath: player
       value: 
       objectReference: {fileID: 1267834058}
-    - target: {fileID: 1669759459102780, guid: 25db5b917112f498c811457b80a7760c, type: 2}
-      propertyPath: m_Name
-      value: GUIbasic
-      objectReference: {fileID: 0}
     - target: {fileID: 114481272429656482, guid: 25db5b917112f498c811457b80a7760c,
         type: 2}
       propertyPath: player
       value: 
       objectReference: {fileID: 1267834058}
+    - target: {fileID: 1669759459102780, guid: 25db5b917112f498c811457b80a7760c, type: 2}
+      propertyPath: m_Name
+      value: GUIbasic
+      objectReference: {fileID: 0}
     - target: {fileID: 224011640335185142, guid: 25db5b917112f498c811457b80a7760c,
         type: 2}
       propertyPath: m_AnchorMin.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224011640335185142, guid: 25db5b917112f498c811457b80a7760c,
         type: 2}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 224011640335185142, guid: 25db5b917112f498c811457b80a7760c,
         type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 25db5b917112f498c811457b80a7760c, type: 2}

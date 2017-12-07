@@ -5139,6 +5139,11 @@ Prefab:
       propertyPath: Priority
       value: 151
       objectReference: {fileID: 0}
+    - target: {fileID: 114556288312568570, guid: 949fd8ad18c96934bbe1dac89059e827,
+        type: 2}
+      propertyPath: healthSlider
+      value: 
+      objectReference: {fileID: 1828417277}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
   m_IsPrefabParent: 0
@@ -19895,6 +19900,12 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &1828417277 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114623169646287956, guid: 25db5b917112f498c811457b80a7760c,
+    type: 2}
+  m_PrefabInternal: {fileID: 105442868}
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1001 &1840144364
 Prefab:
   m_ObjectHideFlags: 0
