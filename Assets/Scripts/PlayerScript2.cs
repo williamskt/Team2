@@ -20,6 +20,7 @@ public class PlayerScript2 : MonoBehaviour {
 	public float ShootRate = 0.1F;		//Rate of shooting if shoot button held down
 	private float NextShoot = 0.0F;		//Empty variable to hold time of next shot
 	public float timeLeft;
+	private int SceneNum;
 
 	private int health = 8;				//Player health
 	private HealthController hCon;
@@ -37,6 +38,7 @@ public class PlayerScript2 : MonoBehaviour {
 		my_animator = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
 		hCon = GetComponent<HealthController> ();
+		SceneNum = SceneManager.GetActiveScene ().buildIndex;
 
 		//Saving the inital x, y, z scales
 		//If the character needs to be resized, this allows the code to adjust automatically
@@ -49,8 +51,8 @@ public class PlayerScript2 : MonoBehaviour {
 
 	void Update () {
 		timeLeft -= Time.deltaTime;
-		if (timeLeft < 0) {
-			GameOver ();
+		if (timeLeft == 0) {
+			SceneManager.LoadScene (SceneNum);
 		}
 		float moveHorizontal = Input.GetAxis ("Horizontal");
 		transform.position += new Vector3 (moveHorizontal, 0f, 0f) * Time.deltaTime * speed;
@@ -200,8 +202,14 @@ public class PlayerScript2 : MonoBehaviour {
 			timeLeft += 5;
 			Destroy (other.gameObject);
 		}
-		else if (other.gameObject.CompareTag ("Portal")) {
-			SceneManager.LoadScene (1);
+		else if (other.gameObject.CompareTag ("Portal_1")) {
+			SceneManager.LoadScene (2);
+		} else if (other.gameObject.CompareTag ("Portal_2")) {
+			SceneManager.LoadScene (0);
+		}
+		else if (other.gameObject.CompareTag ("Lava")) {
+			print ("lava");
+			SceneManager.LoadScene (2);
 		}
 	}
 

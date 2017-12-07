@@ -12,6 +12,8 @@ TagManager:
   - border
   - TimePickup
   - Portal
+  - Portal_1
+  - Portal_2
   layers:
   - Default
   - TransparentFX
