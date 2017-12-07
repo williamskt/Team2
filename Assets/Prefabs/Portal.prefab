@@ -9,77 +9,47 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1596396565838268}
+  m_RootGameObject: {fileID: 1218450900253354}
   m_IsPrefabParent: 1
---- !u!1 &1236955625056684
+--- !u!1 &1218450900253354
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4371537636444070}
+  - component: {fileID: 4506738153963052}
+  - component: {fileID: 95129972232207486}
+  - component: {fileID: 212420573599469284}
+  - component: {fileID: 50328575192546306}
+  - component: {fileID: 61745010884411908}
   m_Layer: 0
-  m_Name: ThrowPoint
-  m_TagString: Untagged
-  m_Icon: {fileID: -1577725955494882426, guid: 0000000000000000d000000000000000, type: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!1 &1596396565838268
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4408638068333878}
-  - component: {fileID: 212757236734479266}
-  - component: {fileID: 50858382273032780}
-  - component: {fileID: 61116503825401158}
-  - component: {fileID: 95662529629999408}
-  - component: {fileID: 114338527221474306}
-  m_Layer: 0
-  m_Name: RoboNinjaBasic
-  m_TagString: enemy
+  m_Name: Portal
+  m_TagString: Portal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4371537636444070
+--- !u!4 &4506738153963052
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1236955625056684}
+  m_GameObject: {fileID: 1218450900253354}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.58, y: 1.03, z: 0}
+  m_LocalPosition: {x: 58.02581, y: 3.615992, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 4408638068333878}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4408638068333878
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596396565838268}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.51, y: -2.19, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0}
-  m_Children:
-  - {fileID: 4371537636444070}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50858382273032780
+--- !u!50 &50328575192546306
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596396565838268}
+  m_GameObject: {fileID: 1218450900253354}
   m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
@@ -93,41 +63,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61116503825401158
+--- !u!61 &61745010884411908
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596396565838268}
+  m_GameObject: {fileID: 1218450900253354}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.360001, y: 8.68}
-    newSize: {x: 8.360001, y: 8.68}
+    oldSize: {x: 4.36, y: 8.86}
+    newSize: {x: 4.36, y: 8.86}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.360001, y: 8.68}
+  m_Size: {x: 5, y: 10}
   m_EdgeRadius: 0
---- !u!95 &95662529629999408
+--- !u!95 &95129972232207486
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596396565838268}
+  m_GameObject: {fileID: 1218450900253354}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 385dd910cacb5c44b9d20ce2efeda30d, type: 2}
+  m_Controller: {fileID: 9100000, guid: 46eff82e3d51a443db1e175ea0ed1b71, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -135,29 +105,12 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &114338527221474306
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596396565838268}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31e4c65a1ba7741369444a7c0e440008, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Player: {fileID: 0}
-  NinjaStar: {fileID: 1939579257518340, guid: 1f6b7c8fa7ad5a343b02419a9186c1fa, type: 2}
-  AttackPoint: {fileID: 4371537636444070}
-  EnemyHealth: 8
-  AttackDist: 12
-  AttackRate: 1.5
---- !u!212 &212757236734479266
+--- !u!212 &212420573599469284
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1596396565838268}
+  m_GameObject: {fileID: 1218450900253354}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -184,12 +137,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: be306fa54f7e23b4a9fdb6385b3871f4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 9b37f71aeb1d2c744bfad4e152131001, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 8.360001, y: 8.68}
+  m_Size: {x: 4.36, y: 8.86}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
