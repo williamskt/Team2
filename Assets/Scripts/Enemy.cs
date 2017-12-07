@@ -57,13 +57,13 @@ public class Enemy : MonoBehaviour {
 			z_posE = transform.position.z;
 
 			//Enemy always faces player, but can't figure out how to flip the direction of the star
-			/*if (x_posP > x_posE) {
+			if (x_posP > x_posE) {
 				transform.localScale = new Vector3 (-x_scaleE, y_scaleE, z_scaleE);
-				throwFlip = true;
+				//throwFlip = true;
 			} else if (x_posP < x_posE) {
 				transform.localScale = new Vector3 (x_scaleE, y_scaleE, z_scaleE);
-				throwFlip = false;
-			}*/
+				//throwFlip = false;
+			}
 			//Both instances below (Abs & Distance) work, but both output two numbers, don't know why
 			//Dist = Mathf.Abs (x_posE - x_posP); 
 			Dist = Vector3.Distance(Player.transform.position, transform.position);

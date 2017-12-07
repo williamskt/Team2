@@ -6,18 +6,45 @@ public class NinjaStarController : MonoBehaviour {
 
 	public float StarSpeed = 10F;
 	private float initialSpeed;
+	private float PlayerX;
+	private float StarX;
+	private float StarDir;
 	private GameObject player;
 	private GameObject Ninja;
 
 	//Use this for initialization
 	void Start () {
-		Ninja = GetComponentInParent<GameObject> ();
-		initialSpeed = StarSpeed;
-		if (Ninja.transform.localScale.x < 0) {
-			StarSpeed = -initialSpeed;
+
+		player = GameObject.Find ("PlayerBasic");
+		PlayerX = player.transform.position.x;
+		StarX = transform.position.x;
+
+		//Ninja = GetComponentInParent<GameObject> ();
+		//initialSpeed = StarSpeed;
+		//if (Ninja.transform.localScale.x < 0) {
+			//StarSpeed = -initialSpeed;
+		//} else {
+			//StarSpeed = initialSpeed;
+		//}
+
+		StarDir = PlayerX - StarX;
+
+		if (StarDir <= 0.05) {
+			StarX = StarX - 3f;
 		} else {
-			StarSpeed = initialSpeed;
+			StarX = StarX + 3f;
 		}
+
+		StarDir = PlayerX - StarX;
+
+		if (StarDir < 0) {
+			StarSpeed = -StarSpeed;
+		} else {
+			StarSpeed = Mathf.Abs (StarSpeed);
+		}
+
+
+
 		GetComponent<Rigidbody2D>().velocity = new Vector2 (StarSpeed, GetComponent<Rigidbody2D>().velocity.y);
 	}
 	
