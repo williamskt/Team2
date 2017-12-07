@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 79281238}
   - component: {fileID: 79281237}
   m_Layer: 0
-  m_Name: SpaceLevelMusic
+  m_Name: Noire Song
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +779,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 450ad2bda95c9da40a2f5c91bb2fb627, type: 3}
+  m_audioClip: {fileID: 8300000, guid: c2dc0155614afd64ab667f9b4906ac7f, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -5082,6 +5082,16 @@ Prefab:
         type: 2}
       propertyPath: m_SortingOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 82871840211213326, guid: 949fd8ad18c96934bbe1dac89059e827,
+        type: 2}
+      propertyPath: m_Volume
+      value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 82871840211213326, guid: 949fd8ad18c96934bbe1dac89059e827,
+        type: 2}
+      propertyPath: Priority
+      value: 151
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 949fd8ad18c96934bbe1dac89059e827, type: 2}
