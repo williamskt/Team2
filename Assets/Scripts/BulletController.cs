@@ -17,7 +17,7 @@ public class BulletController : MonoBehaviour {
 		if (player.transform.localScale.x < 0) {
 			BulletSpeed = -BulletSpeed;
 		} else {
-			Mathf.Abs (BulletSpeed);
+			BulletSpeed = Mathf.Abs (BulletSpeed);
 		}
 
 	}
