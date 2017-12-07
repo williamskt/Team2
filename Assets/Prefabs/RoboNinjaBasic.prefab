@@ -149,7 +149,7 @@ MonoBehaviour:
   Player: {fileID: 0}
   NinjaStar: {fileID: 1939579257518340, guid: 1f6b7c8fa7ad5a343b02419a9186c1fa, type: 2}
   AttackPoint: {fileID: 4371537636444070}
-  EnemyHealth: 4
+  EnemyHealth: 8
   AttackDist: 12
   AttackRate: 1.5
 --- !u!212 &212757236734479266

@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour {
 	private float y_posP;		//y position of player
 	private float z_posP;		//z position of player
 
-	public int EnemyHealth = 4;	//Health points for enemy
+	public int EnemyHealth = 12;	//Health points for enemy
 	public float AttackDist = 12F;	//Distance when enemy starts attacking
 	private float Dist;				//Variable to tell how far player is from enemy
 	private Vector3 target;
