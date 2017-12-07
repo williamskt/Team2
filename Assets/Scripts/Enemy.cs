@@ -7,9 +7,7 @@ public class Enemy : MonoBehaviour {
 	Animator enemy_animator;
 	public GameObject Player;
 	public GameObject NinjaStar;//Object the character will attack with
-	private GameObject NinjaBody;
 	private Rigidbody2D starBody;
-	private Rigidbody2D star;
 	public Transform AttackPoint;
 	private float x_scaleE;		//x scale of enemy
 	private float y_scaleE;		//y scale of enemy
@@ -24,7 +22,6 @@ public class Enemy : MonoBehaviour {
 	public int EnemyHealth = 12;	//Health points for enemy
 	public float AttackDist = 12F;	//Distance when enemy starts attacking
 	private float Dist;				//Variable to tell how far player is from enemy
-	private float Dir;
 	private Vector3 target;
 	public float AttackRate = 0.1F;
 	private float NextAttack = 0.0F;
@@ -35,7 +32,6 @@ public class Enemy : MonoBehaviour {
 	void Start () {
 		starBody = NinjaStar.GetComponent<Rigidbody2D> ();
 		enemy_animator = GetComponent<Animator> ();
-		NinjaBody = gameObject;
 		//Saving the inital x, y, z scales
 		//If the enemy needs to be resized, this allows the code to adjust automatically
 		//instead of recoding the values later on
@@ -68,20 +64,8 @@ public class Enemy : MonoBehaviour {
 				transform.localScale = new Vector3 (x_scaleE, y_scaleE, z_scaleE);
 				throwFlip = false;
 			}*/
-
-		
-			Dir = x_posE - x_posP;	//Determining position between player and enemy
-			//Direction enemy changes depending on where player is in relation to enemy
-			if (Dir <= 0) {		
-				transform.localScale = new Vector3 (-x_scaleE, y_scaleE, z_scaleE);
-				//throwFlip = true;
-			} else if (Dir > 0) {
-				transform.localScale = new Vector3 (x_scaleE, y_scaleE, z_scaleE);
-				//throwFlip = false;
-			}
-
 			//Both instances below (Abs & Distance) work, but both output two numbers, don't know why
-			//Dist = Mathf.Abs (x_posE - x_posP);
+			//Dist = Mathf.Abs (x_posE - x_posP); 
 			Dist = Vector3.Distance(Player.transform.position, transform.position);
 			//print (Dist);
 
@@ -91,8 +75,9 @@ public class Enemy : MonoBehaviour {
 
 				if (Time.time > NextAttack) {
 					NextAttack = Time.time + AttackRate;
+					Rigidbody2D star;
 					star = Instantiate (starBody, AttackPoint.position, AttackPoint.rotation) as Rigidbody2D;
-					//star.velocity = transform.TransformDirection (Vector2.left * 10);
+					star.velocity = transform.TransformDirection (Vector2.left * 10);
 					//star.Throw (throwFlip);
 				}
 			} else {
