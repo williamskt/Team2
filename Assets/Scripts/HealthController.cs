@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class HealthController : MonoBehaviour {
 
 	public int startingHealth = 8;
-	public int currentHealth;
+	public int currentHealth = 8;
 	public Image healthImage;
 	public Slider healthSlider;
 
@@ -32,11 +32,9 @@ public class HealthController : MonoBehaviour {
 	public void TakeDamage(){
 		damaged = true;
 		currentHealth--;
+		healthSlider.value = currentHealth;
 		if (currentHealth <= 0) {
 			player.GameOver ();
-		} 
-		else {
-			healthSlider.value = currentHealth;
 		}
 		damaged = false;
 	}

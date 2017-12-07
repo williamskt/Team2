@@ -33,7 +33,7 @@ public class PlayerScript2 : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		timeLeft = 60.0f;
+		timeLeft = 30.0f;
 		my_animator = GetComponent<Animator> ();
 		rb = GetComponent<Rigidbody2D> ();
 		hCon = GetComponent<HealthController> ();
@@ -215,6 +215,7 @@ public class PlayerScript2 : MonoBehaviour {
 			//yield return new WaitForSeconds (1);	//Tried to make a delay between shots
 			NextShoot = Time.time + ShootRate;
 			Instantiate (Bullet_1, ShootPoint.position, ShootPoint.rotation);
+			GetComponent<AudioSource> ().Play ();
 		}
 	}
 
