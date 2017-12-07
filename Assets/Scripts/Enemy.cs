@@ -117,7 +117,7 @@ public class Enemy : MonoBehaviour {
 				enemy_animator.SetBool("IdleToAttack", false);
 				enemy_animator.SetBool ("AttackToIdle", false);
 				enemy_animator.SetBool ("Death", true);
-				yield return new WaitForSeconds (3);
+				yield return new WaitForSeconds (1);
 				Destroy (gameObject);
 			}
 		}
