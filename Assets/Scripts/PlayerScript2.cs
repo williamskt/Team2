@@ -200,6 +200,9 @@ public class PlayerScript2 : MonoBehaviour {
 			timeLeft += 5;
 			Destroy (other.gameObject);
 		}
+		else if (other.gameObject.CompareTag ("Portal")) {
+			SceneManager.LoadScene (1);
+		}
 	}
 
 	public int getHealth(){

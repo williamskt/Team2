@@ -8,6 +8,7 @@ public class HealthController : MonoBehaviour {
 	public int startingHealth = 8;
 	public int currentHealth;
 	public Image healthImage;
+	public Slider healthSlider;
 
 	private Animator healthUI;
 	private PlayerScript2 player;
@@ -35,8 +36,7 @@ public class HealthController : MonoBehaviour {
 			player.GameOver ();
 		} 
 		else {
-			time += 0.0833333333;
-			//healthUI.PlayInFixedTime (time);
+			healthSlider.value = currentHealth;
 		}
 		damaged = false;
 	}
