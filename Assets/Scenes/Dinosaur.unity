@@ -5938,7 +5938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 8
-  currentHealth: 0
+  currentHealth: 8
   healthImage: {fileID: 0}
   healthSlider: {fileID: 891245173}
 --- !u!82 &1267834066
